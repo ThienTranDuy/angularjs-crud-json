@@ -1,0 +1,132 @@
+<div class="container" ng-controller="mySomething" >
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <!-- Start title -->
+        <div class="title d-flex justify-content-between align-items-center">
+            <div class="title-left">
+                <h3 class="border-bottom border-gray pb-3 mb-0">Danh sách Số điện thoại</h3>
+            </div>
+            <div class="title-right">
+                <!-- Button trigger modal -->
+                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i
+                        class="fas fa-plus"></i> Thêm</button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+
+
+                            <form>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Thêm mới</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <!-- CONTENT MODAL HERE -->
+                            <div class="modal-body">
+
+
+                                    <div class="form-row">
+                                        <div class="col-12 mb-3">
+                                            <label for="Name">Họ và tên</label>
+                                            <input type="text" class="form-control" name="Name" id="Name" required>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-row">
+                                        <div class="col-12 mb-3">
+                                            <label for="Price">Tiền</label>
+                                            <input type="text" class="form-control"  name="Price" id="Price" required>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-row">
+                                        <div class="col-12 mb-3">
+                                            <label for="Description">Mô tả</label>
+                                            <input type="text" class="form-control" name="Description" id="Description" required>
+                                        </div>
+                                    </div>
+
+
+                            </div>
+                            <!-- CONTENT MODAL HERE -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End title -->
+        <!-- Start table -->
+        <table class="table table-hover">
+            <!-- Start table heading -->
+            <thead>
+                <tr>
+                    <th scope="col">MSNV</th>
+                    <th scope="col">Họ và tên</th>
+                    <th scope="col">Tiền</th>
+                    <th scope="col">Mô tả</th>
+                    <th scope="col">Công cụ</th>
+                </tr>
+            </thead>
+            <!-- End table heading -->
+            <!-- Start table body -->
+            <tbody>
+                <tr  ng-repeat="p in products|orderBy:prop|limitTo:8:begin" >
+                    <th scope="row">{{p.TelId|uppercase}}</th>
+                    <td>{{p.Name}}</td>
+                    <td>{{p.Price}}</td>
+                    <td>{{p.Description}}</td>
+                    <td>
+                        <button class="btn btn-light mr-2"><i class="far fa-edit"></i></button>
+                        <button class="btn btn-light"><i class="far fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+            <!-- End table body -->
+        </table>
+        <!-- End table -->
+        <div class="d-flex justify-content-between">
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#"aria-label="Previous">
+                      <span aria-hidden="true">«</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">&lt;</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">&gt;</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">»</span>
+                    </a>
+                  </li>
+                </ul>
+            </nav>   
+            
+            <!-- Start Count -->
+            <small class="d-block text-right mt-3">
+                <a href="#">Count: 99</a>
+            </small>
+            <!-- End Count -->
+        </div>
+        
+    </div>
+</div>

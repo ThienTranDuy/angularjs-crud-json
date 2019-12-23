@@ -9,7 +9,7 @@ app.controller("mySomething", function($scope, $http){
     // Math pagination
     $scope.begin = 0;
     $scope.products = [];
-    $http.get('data/Prods.js').then(function(response){        
+    $http.get('data/Tel.js').then(function(response){        
       $scope.products = response.data;
       $scope.pageCount = Math.ceil($scope.products.length / 8);
     });

@@ -13,4 +13,7 @@ app.config(function($routeProvider) {
         .when("/product", {
             templateUrl : "product.html"
         })
+        .when("/tel", {
+            templateUrl : "tel.html"
+        })
 });
