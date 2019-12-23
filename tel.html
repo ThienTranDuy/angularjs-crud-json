@@ -1,71 +1,37 @@
 <div class="container" ng-controller="mySomething" >
+
+    <div class="my-3 mb-4 p-3 pb-4 bg-white rounded shadow-sm">
+        <form>
+            <h5 class="modal-title" id="exampleModalCenterTitle">Thêm mới</h5>
+    
+                <div class="form-row">
+                    <div class="col-12 col-md-3">
+                        <label for="Name">Họ và tên</label>
+                        <input type="text" class="form-control" name="Name" id="Name" required>
+                    </div>
+
+                    <div class="col-12 col-md-3">
+                        <label for="Price">Tiền</label>
+                        <input type="text" class="form-control"  name="Price" id="Price" required>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <label for="Description">Mô tả</label>
+                        <input type="text" class="form-control" name="Description" id="Description" required>
+                    </div>
+
+                    <div class="col-12 col-md-2 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary">Thêm</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+
     <div class="my-3 p-3 bg-white rounded shadow-sm">
         <!-- Start title -->
         <div class="title d-flex justify-content-between align-items-center">
             <div class="title-left">
                 <h3 class="border-bottom border-gray pb-3 mb-0">Danh sách Số điện thoại</h3>
-            </div>
-            <div class="title-right">
-                <!-- Button trigger modal -->
-                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i
-                        class="fas fa-plus"></i> Thêm</button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-
-
-
-                            <form>
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">Thêm mới</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <!-- CONTENT MODAL HERE -->
-                            <div class="modal-body">
-
-
-                                    <div class="form-row">
-                                        <div class="col-12 mb-3">
-                                            <label for="Name">Họ và tên</label>
-                                            <input type="text" class="form-control" name="Name" id="Name" required>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-row">
-                                        <div class="col-12 mb-3">
-                                            <label for="Price">Tiền</label>
-                                            <input type="text" class="form-control"  name="Price" id="Price" required>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-row">
-                                        <div class="col-12 mb-3">
-                                            <label for="Description">Mô tả</label>
-                                            <input type="text" class="form-control" name="Description" id="Description" required>
-                                        </div>
-                                    </div>
-
-
-                            </div>
-                            <!-- CONTENT MODAL HERE -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary"
-                                    data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
-                            </div>
-                            </form>
-
-
-
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- End title -->
