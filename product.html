@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="my-3 p-3 bg-white rounded shadow-sm" ng-controller="mySomething" >
+        <h2 class="my-4 text-center text-uppercase">Danh sách hàng hóa</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th style="cursor: pointer;" scope="col" ng-click="sortBy('name') ">Sản phẩm</th>
+              <th style="cursor: pointer;" scope="col" ng-click="sortBy('price') ">Đơn giá</th>
+              <th style="cursor: pointer;" scope="col" ng-click="sortBy('discount') ">Giảm giá</th>
+              <th style="cursor: pointer;" scope="col" ng-click="sortBy('discount') ">Giảm giá %</th>
+              <th style="cursor: pointer;" scope="col" ng-click="sortBy('date') ">Ngày</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="p in products|orderBy:prop|limitTo:8:begin" >
+              <td>{{p.name|uppercase}}</td>
+              <td>{{p.price|currency}}</td>
+              <td>{{p.discount|number:2}}</td>
+              <td>{{p.discount|percentage:2}}</td>
+              <td>{{p.date|date:"MMMM-dd, yyyy"}}</td>              
+            </tr> 
+          </tbody>         
+        </table>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" ng-click="first()" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" ng-click="prev()"><</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" ng-click="next()">></a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" ng-click="last()" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>    
+    </div>
+</div>

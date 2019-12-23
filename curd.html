@@ -1,0 +1,189 @@
+<div class="container">
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <!-- Start title -->
+        <div class="title d-flex justify-content-between align-items-center">
+            <div class="title-left">
+                <h3 class="border-bottom border-gray pb-3 mb-0">Danh sách nhân viên</h3>
+            </div>
+            <div class="title-right">
+                <!-- Button trigger modal -->
+                <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"><i
+                        class="fas fa-plus"></i> Thêm</button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+
+
+                            <form>
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">Thêm mới</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <!-- CONTENT MODAL HERE -->
+                            <div class="modal-body">
+
+
+
+                                    <div class="form-row">
+                                        <div class="col-12 mb-3">
+                                            <label for="validationServer01">Họ và tên</label>
+
+<!--                                                    <input type="text" class="form-control is-valid"-->
+<!--                                                        id="validationServer01" value="Mark" required>-->
+
+                                            <input type="text" class="form-control"
+                                                id="validationServer01" required>
+
+
+
+<!--                                                    <div class="valid-feedback">-->
+<!--                                                        Looks good!-->
+<!--                                                    </div>-->
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-row">
+                                        <div class="col-12 mb-3">
+                                            <label for="ngaysinhForm">Ngày sinh</label>
+
+<!--                                                    <input type="text" class="form-control is-valid"-->
+<!--                                                        id="ngaysinhForm" value="Mark" required>-->
+
+                                            <input type="text" class="form-control"
+                                                id="ngaysinhForm" required>
+
+
+
+<!--                                                    <div class="valid-feedback">-->
+<!--                                                        Looks good!-->
+<!--                                                    </div>-->
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-row">
+                                        <div class="col-12 mb-3">
+                                            <label for="gioitinhForm">Giới tính</label>
+
+<!--                                                    <input type="text" class="form-control is-valid"-->
+<!--                                                        id="gioitinhForm" value="Mark" required>-->
+
+                                            <input type="text" class="form-control"
+                                                id="gioitinhForm" required>
+
+
+
+<!--                                                    <div class="valid-feedback">-->
+<!--                                                        Looks good!-->
+<!--                                                    </div>-->
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-row">
+                                        <div class="col-12 mb-3">
+                                            <label for="emailForm">Email</label>
+
+<!--                                                    <input type="text" class="form-control is-valid"-->
+<!--                                                        id="emailForm" value="Mark" required>-->
+
+                                            <input type="text" class="form-control"
+                                                id="emailForm" required>
+
+
+
+<!--                                                    <div class="valid-feedback">-->
+<!--                                                        Looks good!-->
+<!--                                                    </div>-->
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-row">
+                                        <div class="col-12 mb-3">
+                                            <label for="tienluongForm">Tiền lương</label>
+
+<!--                                                    <input type="text" class="form-control is-valid"-->
+<!--                                                        id="tienluongForm" value="Mark" required>-->
+
+                                            <input type="text" class="form-control"
+                                                id="tienluongForm" required>
+
+
+
+<!--                                                    <div class="valid-feedback">-->
+<!--                                                        Looks good!-->
+<!--                                                    </div>-->
+
+                                        </div>
+                                    </div>
+
+
+
+                            </div>
+                            <!-- CONTENT MODAL HERE -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End title -->
+        <!-- Start table -->
+        <table class="table table-hover">
+            <!-- Start table heading -->
+            <thead>
+                <tr>
+                    <th scope="col">MSNV</th>
+                    <th scope="col">Họ và tên</th>
+                    <th scope="col">Ngày sinh</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tiền lương</th>
+                    <th scope="col">Công cụ</th>
+                </tr>
+            </thead>
+            <!-- End table heading -->
+            <!-- Start table body -->
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Trần Duy Thiên</td>
+                    <td>20/03/1998</td>
+                    <td>Nam</td>
+                    <td>duythientran1998@gmail.com</td>
+                    <td>123456789</td>
+                    <td>
+                        <button class="btn btn-light mr-2"><i class="far fa-edit"></i></button>
+                        <button class="btn btn-light"><i class="far fa-trash-alt"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+            <!-- End table body -->
+        </table>
+        <!-- End table -->
+        <!-- Start Count -->
+        <small class="d-block text-right mt-3">
+            <a href="#">Count: 99</a>
+        </small>
+        <!-- End Count -->
+    </div>
+</div>
