@@ -1,0 +1,41 @@
+<div class="container" ng-controller="checkoutController" >
+
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <!-- Start title -->
+        <div class="title d-flex justify-content-between align-items-center">
+            <div class="title-left">
+                <h3 class="border-bottom border-gray pb-3 mb-0">Giỏ hàng</h3>
+            </div>
+        </div>
+        <!-- End title -->
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Mua SP</th>
+                <th scope="col">Hình ảnh</th>
+                <th scope="col">Tên Sản phẩm</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Đơn giá</th>
+                <th scope="col">Thành Tiền</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="p in products" ng-init="p.Quality=0">
+                <th scope="row">
+                  <input type="checkbox" ng-model="p.buy" >
+                </th>
+                <td ng-bind="p.Name"></td>
+                <td>
+                  <img src="{{p.Img}}" alt="" srcset="">
+                </td>
+                <td>
+                  <input type="number" ng-model="p.Quality" ng-disabled="!p.buy">
+                </td>
+                <td ng-bind="p.Price"></td>
+                <td ng-bind="p.Price*p.Quality"></td>
+              </tr>            
+            </tbody>
+          </table>
+          <p>Tổng tiền: {{ getTotal() }} VNĐ</p>
+    </div>
+</div>

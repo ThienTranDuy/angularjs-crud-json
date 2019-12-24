@@ -16,4 +16,10 @@ app.config(function($routeProvider) {
         .when("/tel", {
             templateUrl : "tel.html"
         })
+        .when("/card", {
+            templateUrl : "card.html"
+        })
+        .when("/checkout", {
+            templateUrl : "checkout.html"
+        })
 });
